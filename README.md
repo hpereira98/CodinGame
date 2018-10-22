@@ -7,6 +7,10 @@ https://www.codingame.com.
 
 Conteúdo:
 
-- Shadow of The Knight: Episode 1
+`Easy`
 - Power of Thor: Episode 1
 - The Descent
+- Temperatures
+
+`Medium`
+- Shadow of The Knight: Episode 1
