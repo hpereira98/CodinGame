@@ -15,8 +15,7 @@ class Player {
         int N = in.nextInt(); // maximum number of turns before game over.
         int X0 = in.nextInt();
         int Y0 = in.nextInt();
-        int x=X0;
-        int y=Y0;
+
         int ymin = -1; // valor minimo de y (na primeira iteracao é -1)
         int xmin = -1; // valor minimo de x (na primeira iteracao é -1)
         int ymax = H;  // valor maximo de y (altura do edificio)
@@ -31,61 +30,61 @@ class Player {
 
             switch(bombDir){ 
             case "U":
-                ymax = y; // como o comando é UP, o y tem q diminuir, nao ultrapassando o valor atual de y
-                System.out.println(x+" "+(y-(ymax-ymin)/2)); // deslocar y para o ponto medio entre o min e o max
-                y -= (ymax-ymin)/2; // atualizar para valor médio
+                ymax = Y0; // como o comando é UP, o y tem q diminuir, nao ultrapassando o valor atual de y
+                System.out.println(X0+" "+(Y0-(ymax-ymin)/2)); // deslocar y para o ponto medio entre o min e o max
+                Y0 -= (ymax-ymin)/2; // atualizar para valor médio
                 break; // proceder do mm modo para os restantes comandos
             
             case "D":
-                ymin = y;
-                System.out.println(x+" "+(y+(ymax-ymin)/2));
-                y += (ymax-ymin)/2;
+                ymin = Y0;
+                System.out.println(X0+" "+(Y0+(ymax-ymin)/2));
+                Y0 += (ymax-ymin)/2;
                 break;
                 
             case "L":
-                xmax = x;
-                System.out.println((x-(xmax-xmin)/2)+" "+y);
-                x -= (xmax-xmin)/2;
+                xmax = X0;
+                System.out.println((X0-(xmax-xmin)/2)+" "+Y0);
+                X0 -= (xmax-xmin)/2;
                 break;
                 
             case "R":
-                xmin = x;
-                System.out.println((x+(xmax-xmin)/2)+" "+y);
-                x += (xmax-xmin)/2;
+                xmin = X0;
+                System.out.println((X0+(xmax-xmin)/2)+" "+Y0);
+                X0 += (xmax-xmin)/2;
                 break;
                 
             case "UL":
-                ymax = y;
-                xmax = x;
-                System.out.println((x-(xmax-xmin)/2)+" "+(y-(ymax-ymin)/2));
-                x -= (xmax-xmin)/2;
-                y -= (ymax-ymin)/2;
+                ymax = Y0;
+                xmax = X0;
+                System.out.println((X0-(xmax-xmin)/2)+" "+(Y0-(ymax-ymin)/2));
+                X0 -= (xmax-xmin)/2;
+                Y0 -= (ymax-ymin)/2;
                 break;
                 
             case "UR":
-                ymax = y;
-                xmin = x;
+                ymax = Y0;
+                xmin = X0;
                 
-                System.out.println((x+(xmax-xmin)/2)+" "+(y-(ymax-ymin)/2));
-                x += (xmax-xmin)/2;
-                y -= (ymax-ymin)/2;
+                System.out.println((X0+(xmax-xmin)/2)+" "+(Y0-(ymax-ymin)/2));
+                X0 += (xmax-xmin)/2;
+                Y0 -= (ymax-ymin)/2;
                 break;
                 
             case "DL":
-                ymin = y;
-                xmax = x;
+                ymin = Y0;
+                xmax = X0;
                 
-                System.out.println((x-(xmax-xmin)/2)+" "+(y+(ymax-ymin)/2));
-                x -= (xmax-xmin)/2;
-                y += (ymax-ymin)/2;
+                System.out.println((X0-(xmax-xmin)/2)+" "+(Y0+(ymax-ymin)/2));
+                X0 -= (xmax-xmin)/2;
+                Y0 += (ymax-ymin)/2;
                 break;
                 
             case "DR":
-                ymin = y;
-                xmin = x;
-                System.out.println((x+(xmax-xmin)/2)+" "+(y+(ymax-ymin)/2));
-                x += (xmax-xmin)/2;
-                y += (ymax-ymin)/2;
+                ymin = Y0;
+                xmin = X0;
+                System.out.println((X0+(xmax-xmin)/2)+" "+(Y0+(ymax-ymin)/2));
+                X0 += (xmax-xmin)/2;
+                YO += (ymax-ymin)/2;
                 break;
             
             }
