@@ -11,6 +11,7 @@ Conteúdo:
 - Power of Thor: Episode 1
 - The Descent
 - Temperatures
+- Chuck Norris
 
 `Medium`
 - Shadow of The Knight: Episode 1
